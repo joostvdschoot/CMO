@@ -1,0 +1,89 @@
+<!-- TITLE -->
+<div class="mb-40 mt-40">
+    <h1>Account Edit</h1>
+</div>
+<div class="card mb-40">
+    <div class="card-header">
+        <i class="fa fa-edit"></i> Edit
+    </div>
+    <div class="card-body">
+        <form #editForm="ngForm" [ngClass]="{'was-validated': formValid!=null}">
+            <div class="row justify-content-md-center">
+                <div class="col-md-10">
+                    <div class="form-group">
+                        <label for="channel">Channel</label>
+                        <select name="channel" id="channel" [(ngModel)]="item.channel" class="form-control" #channel="ngModel" >
+                            <option value=""></option>
+                            <option value="Direct">Direct</option>
+                            <option value="Indirect">Indirect</option>
+                            <option value="Online">Online</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description *</label>
+                        <input type="text" class="form-control" id="description" [(ngModel)]="item.description" name="description" #description="ngModel" required>
+                        <div class="invalid-feedback">Value is required</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="maxcredit">Maxcredit *</label>
+                        <input type="number" class="form-control" id="maxcredit" [(ngModel)]="item.maxcredit" name="maxcredit" #maxcredit="ngModel" required>
+                        <div class="invalid-feedback">Value is required</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" class="form-control" id="name" [(ngModel)]="item.name" name="name" #name="ngModel" required>
+                        <div class="invalid-feedback">Value is required</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="retailcorpthreshold">Retailcorpthreshold *</label>
+                        <input type="number" class="form-control" id="retailcorpthreshold" [(ngModel)]="item.retailcorpthreshold" name="retailcorpthreshold" #retailcorpthreshold="ngModel" required>
+                        <div class="invalid-feedback">Value is required</div>
+                    </div>
+                    <div class="form-group ">
+                        <label for="revolving">Revolving *</label>
+                        <input type="checkbox" [(ngModel)]="item.revolving" name="revolving" required>
+                        <div class="invalid-feedback">Value is required</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="segment">Segment</label>
+                        <select name="segment" id="segment" [(ngModel)]="item.segment" class="form-control" #segment="ngModel" >
+                            <option value=""></option>
+                            <option value="Large">Large</option>
+                            <option value="Medium">Medium</option>
+                            <option value="Small">Small</option>
+                        </select>
+                    </div>
+                    <!-- RELATIONS -->
+                    <h2 class="mb-20">Relations</h2>
+
+                    <label for="Lessor">Lessor</label>
+                    <select name="lessor" id="lessor" [(ngModel)]="item.lessor" class="form-control" #lessor="ngModel"  >
+                        <option *ngFor="let item of listLessor" [value]="item._id">{{item._id}}</option>
+                    </select>
+                    <label for="Product">Product</label>
+                    <select name="product" id="product" [(ngModel)]="item.product" class="form-control" #product="ngModel"  required>
+                        <option *ngFor="let item of listProduct" [value]="item._id">{{item._id}}</option>
+                    </select>
+                        <div class="invalid-feedback">Value is required</div>
+
+                    <h2 *ngIf="externalPartner_account[0] || externalCreditLine_account[0]">External Relations</h2>
+        
+                        <h3 *ngIf="externalPartner_account[0]">Partner</h3>
+                        <ul class="list-group">
+                        <li class="list-group-item" *ngFor="let item of externalPartner_account">{{item._id}}</li>
+                        </ul>
+                        <h3 *ngIf="externalCreditLine_account[0]">CreditLine</h3>
+                        <ul class="list-group">
+                        <li class="list-group-item" *ngFor="let item of externalCreditLine_account">{{item._id}}</li>
+                        </ul>
+
+                    <!-- BUTTON BAR -->
+                    <div class="mt-40">
+                        <button class="btn btn-primary pull-right" (click)="save(editForm.valid, item)">Save</button>
+                        <button class="btn btn-secondary pull-right mr-2" (click)="goBack()">Back To List</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

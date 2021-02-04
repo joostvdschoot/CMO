@@ -1,0 +1,83 @@
+<!-- TITLE -->
+<div class="mb-40 mt-40">
+    <h1>Lessor Edit</h1>
+</div>
+<div class="card mb-40">
+    <div class="card-header">
+        <i class="fa fa-edit"></i> Edit
+    </div>
+    <div class="card-body">
+        <form #editForm="ngForm" [ngClass]="{'was-validated': formValid!=null}">
+            <div class="row justify-content-md-center">
+                <div class="col-md-10">
+                    <div class="form-group">
+                        <label for="externalid">Externalid</label>
+                        <input type="text" class="form-control" id="externalid" [(ngModel)]="item.externalid" name="externalid" #externalid="ngModel" >
+                    </div>
+                    <div class="form-group">
+                        <label for="genesis">Genesis *</label>
+                        <input type="text" class="form-control" id="genesis" [(ngModel)]="item.genesis" name="genesis" #genesis="ngModel" required>
+                        <div class="invalid-feedback">Value is required</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" class="form-control" id="name" [(ngModel)]="item.name" name="name" #name="ngModel" required>
+                        <div class="invalid-feedback">Value is required</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="number">Number *</label>
+                        <input type="text" class="form-control" id="number" [(ngModel)]="item.number" name="number" #number="ngModel" required>
+                        <div class="invalid-feedback">Value is required</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="share">Share *</label>
+                        <input type="number" class="form-control" id="share" [(ngModel)]="item.share" name="share" #share="ngModel" required>
+                        <div class="invalid-feedback">Value is required</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="type">Type *</label>
+                        <select name="type" id="type" [(ngModel)]="item.type" class="form-control" #type="ngModel" required>
+                            <option value=""></option>
+                            <option value="Athlon">Athlon</option>
+                            <option value="JV">JV</option>
+                            <option value="Label">Label</option>
+                        </select>
+                        <div class="invalid-feedback">Value is required</div>
+                    </div>
+                    <!-- RELATIONS -->
+                    <h2 class="mb-20">Relations</h2>
+
+                    <label for="Country">Country</label>
+                    <select name="country" id="country" [(ngModel)]="item.country" class="form-control" #country="ngModel"  >
+                        <option *ngFor="let item of listCountry" [value]="item._id">{{item._id}}</option>
+                    </select>
+                    <label for="Lessor">Lessor</label>
+                    <select name="operatingentity" id="operatingentity" [(ngModel)]="item.operatingentity" class="form-control" #operatingentity="ngModel"  >
+                        <option *ngFor="let item of listOperatingentity" [value]="item._id">{{item._id}}</option>
+                    </select>
+
+                    <h2 *ngIf="externalAccount_lessor[0] || externalPartner_lessor[0] || externalOrganization_lessor[0]">External Relations</h2>
+        
+                        <h3 *ngIf="externalAccount_lessor[0]">Account</h3>
+                        <ul class="list-group">
+                        <li class="list-group-item" *ngFor="let item of externalAccount_lessor">{{item._id}}</li>
+                        </ul>
+                        <h3 *ngIf="externalPartner_lessor[0]">Partner</h3>
+                        <ul class="list-group">
+                        <li class="list-group-item" *ngFor="let item of externalPartner_lessor">{{item._id}}</li>
+                        </ul>
+                        <h3 *ngIf="externalOrganization_lessor[0]">Organization</h3>
+                        <ul class="list-group">
+                        <li class="list-group-item" *ngFor="let item of externalOrganization_lessor">{{item._id}}</li>
+                        </ul>
+
+                    <!-- BUTTON BAR -->
+                    <div class="mt-40">
+                        <button class="btn btn-primary pull-right" (click)="save(editForm.valid, item)">Save</button>
+                        <button class="btn btn-secondary pull-right mr-2" (click)="goBack()">Back To List</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
