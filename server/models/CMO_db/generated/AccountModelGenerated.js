@@ -50,26 +50,6 @@ const generatedModel = {
   },
   
   /**
-  * AccountModel.findByLessor
-  *   @description CRUD ACTION findByLessor
-  *   @param Objectid key Id of model to search for
-  *
-  */
-  async findByLessor(key) {
-    return await Database.getConnection().models.Account.findAll({ where: { "Lessor": key } });
-  },
-  
-  /**
-  * AccountModel.findByProduct
-  *   @description CRUD ACTION findByProduct
-  *   @param Objectid key Id of model to search for
-  *
-  */
-  async findByProduct(key) {
-    return await Database.getConnection().models.Account.findAll({ where: { "Product": key } });
-  },
-  
-  /**
   * AccountModel.findBylessor
   *   @description CRUD ACTION findBylessor
   *   @param Objectid key Id of model to search for

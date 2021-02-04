@@ -105,48 +105,6 @@ export class PartnerBaseService {
     }
 
     /**
-    * PartnerService.findByAccount
-    *   @description CRUD ACTION findByAccount
-    *   @param Objectid key Id of model to search for
-    *
-    */
-    findByAccount(id: string): Observable<Partner[]> {
-        return this.http
-            .get<Partner[]>(this.contextUrl + '/findByAccount/' + id)
-            .pipe(
-                map(response => response)
-            );
-    }
-
-    /**
-    * PartnerService.findByCountry
-    *   @description CRUD ACTION findByCountry
-    *   @param Objectid key Id of model to search for
-    *
-    */
-    findByCountry(id: string): Observable<Partner[]> {
-        return this.http
-            .get<Partner[]>(this.contextUrl + '/findByCountry/' + id)
-            .pipe(
-                map(response => response)
-            );
-    }
-
-    /**
-    * PartnerService.findByLessor
-    *   @description CRUD ACTION findByLessor
-    *   @param Objectid key Id of model to search for
-    *
-    */
-    findByLessor(id: string): Observable<Partner[]> {
-        return this.http
-            .get<Partner[]>(this.contextUrl + '/findByLessor/' + id)
-            .pipe(
-                map(response => response)
-            );
-    }
-
-    /**
     * PartnerService.findByaccount
     *   @description CRUD ACTION findByaccount
     *   @param Objectid key Id of model to search for

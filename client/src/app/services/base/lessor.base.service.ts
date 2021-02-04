@@ -118,20 +118,6 @@ export class LessorBaseService {
     }
 
     /**
-    * LessorService.findByCountry
-    *   @description CRUD ACTION findByCountry
-    *   @param Objectid key Id of model to search for
-    *
-    */
-    findByCountry(id: string): Observable<Lessor[]> {
-        return this.http
-            .get<Lessor[]>(this.contextUrl + '/findByCountry/' + id)
-            .pipe(
-                map(response => response)
-            );
-    }
-
-    /**
     * LessorService.findBycountry
     *   @description CRUD ACTION findBycountry
     *   @param Objectid key Id of model to search for

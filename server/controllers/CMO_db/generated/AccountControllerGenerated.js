@@ -29,8 +29,6 @@ const generatedControllers = {
     const baseUrl = `${Properties.api}/account`;
     router.post(baseUrl + "", authorize([]), AccountController.create);
     router.delete(baseUrl + "/:id", authorize([]), AccountController.delete);
-    router.get(baseUrl + "/findByLessor/:key", authorize([]), AccountController.findByLessor);
-    router.get(baseUrl + "/findByProduct/:key", authorize([]), AccountController.findByProduct);
     router.get(baseUrl + "/findBylessor/:key", authorize([]), AccountController.findBylessor);
     router.get(baseUrl + "/findByproduct/:key", authorize([]), AccountController.findByproduct);
     router.get(baseUrl + "/:id", authorize([]), AccountController.get);
@@ -66,38 +64,6 @@ const generatedControllers = {
   delete: async (req, res) => {
     try {
       const result = await AccountModel.delete(req.params.id);
-      res.json(result);
-    } catch (err) {
-      const safeErr = ErrorManager.getSafeError(err);
-      res.status(safeErr.status).json(safeErr);
-    }
-  },
-  
-  /**
-  * AccountModel.findByLessor
-  *   @description CRUD ACTION findByLessor
-  *   @param Objectid key Id of model to search for
-  *
-  */
-  findByLessor: async (req, res) => {
-    try {
-      const result = await AccountModel.findByLessor(req.params.key);
-      res.json(result);
-    } catch (err) {
-      const safeErr = ErrorManager.getSafeError(err);
-      res.status(safeErr.status).json(safeErr);
-    }
-  },
-  
-  /**
-  * AccountModel.findByProduct
-  *   @description CRUD ACTION findByProduct
-  *   @param Objectid key Id of model to search for
-  *
-  */
-  findByProduct: async (req, res) => {
-    try {
-      const result = await AccountModel.findByProduct(req.params.key);
       res.json(result);
     } catch (err) {
       const safeErr = ErrorManager.getSafeError(err);

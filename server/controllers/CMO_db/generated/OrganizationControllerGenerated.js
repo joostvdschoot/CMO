@@ -29,9 +29,6 @@ const generatedControllers = {
     const baseUrl = `${Properties.api}/organization`;
     router.post(baseUrl + "", authorize([]), OrganizationController.create);
     router.delete(baseUrl + "/:id", authorize([]), OrganizationController.delete);
-    router.get(baseUrl + "/findByCountry/:key", authorize([]), OrganizationController.findByCountry);
-    router.get(baseUrl + "/findByLessor/:key", authorize([]), OrganizationController.findByLessor);
-    router.get(baseUrl + "/findByPartner/:key", authorize([]), OrganizationController.findByPartner);
     router.get(baseUrl + "/findBycountry/:key", authorize([]), OrganizationController.findBycountry);
     router.get(baseUrl + "/findBylessor/:key", authorize([]), OrganizationController.findBylessor);
     router.get(baseUrl + "/findBypartner/:key", authorize([]), OrganizationController.findBypartner);
@@ -68,54 +65,6 @@ const generatedControllers = {
   delete: async (req, res) => {
     try {
       const result = await OrganizationModel.delete(req.params.id);
-      res.json(result);
-    } catch (err) {
-      const safeErr = ErrorManager.getSafeError(err);
-      res.status(safeErr.status).json(safeErr);
-    }
-  },
-  
-  /**
-  * OrganizationModel.findByCountry
-  *   @description CRUD ACTION findByCountry
-  *   @param Objectid key Id of model to search for
-  *
-  */
-  findByCountry: async (req, res) => {
-    try {
-      const result = await OrganizationModel.findByCountry(req.params.key);
-      res.json(result);
-    } catch (err) {
-      const safeErr = ErrorManager.getSafeError(err);
-      res.status(safeErr.status).json(safeErr);
-    }
-  },
-  
-  /**
-  * OrganizationModel.findByLessor
-  *   @description CRUD ACTION findByLessor
-  *   @param Objectid key Id of model to search for
-  *
-  */
-  findByLessor: async (req, res) => {
-    try {
-      const result = await OrganizationModel.findByLessor(req.params.key);
-      res.json(result);
-    } catch (err) {
-      const safeErr = ErrorManager.getSafeError(err);
-      res.status(safeErr.status).json(safeErr);
-    }
-  },
-  
-  /**
-  * OrganizationModel.findByPartner
-  *   @description CRUD ACTION findByPartner
-  *   @param Objectid key Id of model to search for
-  *
-  */
-  findByPartner: async (req, res) => {
-    try {
-      const result = await OrganizationModel.findByPartner(req.params.key);
       res.json(result);
     } catch (err) {
       const safeErr = ErrorManager.getSafeError(err);

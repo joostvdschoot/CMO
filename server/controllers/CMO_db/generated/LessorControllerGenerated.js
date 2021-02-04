@@ -29,7 +29,6 @@ const generatedControllers = {
     const baseUrl = `${Properties.api}/lessor`;
     router.post(baseUrl + "", authorize([]), LessorController.create);
     router.delete(baseUrl + "/:id", authorize([]), LessorController.delete);
-    router.get(baseUrl + "/findByCountry/:key", authorize([]), LessorController.findByCountry);
     router.get(baseUrl + "/findBycountry/:key", authorize([]), LessorController.findBycountry);
     router.get(baseUrl + "/:id", authorize([]), LessorController.get);
     router.get(baseUrl + "", authorize([]), LessorController.list);
@@ -64,22 +63,6 @@ const generatedControllers = {
   delete: async (req, res) => {
     try {
       const result = await LessorModel.delete(req.params.id);
-      res.json(result);
-    } catch (err) {
-      const safeErr = ErrorManager.getSafeError(err);
-      res.status(safeErr.status).json(safeErr);
-    }
-  },
-  
-  /**
-  * LessorModel.findByCountry
-  *   @description CRUD ACTION findByCountry
-  *   @param Objectid key Id of model to search for
-  *
-  */
-  findByCountry: async (req, res) => {
-    try {
-      const result = await LessorModel.findByCountry(req.params.key);
       res.json(result);
     } catch (err) {
       const safeErr = ErrorManager.getSafeError(err);

@@ -29,8 +29,6 @@ const generatedControllers = {
     const baseUrl = `${Properties.api}/creditline`;
     router.post(baseUrl + "", authorize([]), CreditLineController.create);
     router.delete(baseUrl + "/:id", authorize([]), CreditLineController.delete);
-    router.get(baseUrl + "/findByAccount/:key", authorize([]), CreditLineController.findByAccount);
-    router.get(baseUrl + "/findByOrganization/:key", authorize([]), CreditLineController.findByOrganization);
     router.get(baseUrl + "/findByaccount/:key", authorize([]), CreditLineController.findByaccount);
     router.get(baseUrl + "/findByorganization/:key", authorize([]), CreditLineController.findByorganization);
     router.get(baseUrl + "/:id", authorize([]), CreditLineController.get);
@@ -66,38 +64,6 @@ const generatedControllers = {
   delete: async (req, res) => {
     try {
       const result = await CreditLineModel.delete(req.params.id);
-      res.json(result);
-    } catch (err) {
-      const safeErr = ErrorManager.getSafeError(err);
-      res.status(safeErr.status).json(safeErr);
-    }
-  },
-  
-  /**
-  * CreditLineModel.findByAccount
-  *   @description CRUD ACTION findByAccount
-  *   @param Objectid key Id of model to search for
-  *
-  */
-  findByAccount: async (req, res) => {
-    try {
-      const result = await CreditLineModel.findByAccount(req.params.key);
-      res.json(result);
-    } catch (err) {
-      const safeErr = ErrorManager.getSafeError(err);
-      res.status(safeErr.status).json(safeErr);
-    }
-  },
-  
-  /**
-  * CreditLineModel.findByOrganization
-  *   @description CRUD ACTION findByOrganization
-  *   @param Objectid key Id of model to search for
-  *
-  */
-  findByOrganization: async (req, res) => {
-    try {
-      const result = await CreditLineModel.findByOrganization(req.params.key);
       res.json(result);
     } catch (err) {
       const safeErr = ErrorManager.getSafeError(err);

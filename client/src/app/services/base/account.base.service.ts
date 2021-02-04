@@ -119,34 +119,6 @@ export class AccountBaseService {
     }
 
     /**
-    * AccountService.findByLessor
-    *   @description CRUD ACTION findByLessor
-    *   @param Objectid key Id of model to search for
-    *
-    */
-    findByLessor(id: string): Observable<Account[]> {
-        return this.http
-            .get<Account[]>(this.contextUrl + '/findByLessor/' + id)
-            .pipe(
-                map(response => response)
-            );
-    }
-
-    /**
-    * AccountService.findByProduct
-    *   @description CRUD ACTION findByProduct
-    *   @param Objectid key Id of model to search for
-    *
-    */
-    findByProduct(id: string): Observable<Account[]> {
-        return this.http
-            .get<Account[]>(this.contextUrl + '/findByProduct/' + id)
-            .pipe(
-                map(response => response)
-            );
-    }
-
-    /**
     * AccountService.findBylessor
     *   @description CRUD ACTION findBylessor
     *   @param Objectid key Id of model to search for

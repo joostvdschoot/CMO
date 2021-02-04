@@ -50,26 +50,6 @@ const generatedModel = {
   },
   
   /**
-  * CreditLineModel.findByAccount
-  *   @description CRUD ACTION findByAccount
-  *   @param Objectid key Id of model to search for
-  *
-  */
-  async findByAccount(key) {
-    return await Database.getConnection().models.CreditLine.findAll({ where: { "Account": key } });
-  },
-  
-  /**
-  * CreditLineModel.findByOrganization
-  *   @description CRUD ACTION findByOrganization
-  *   @param Objectid key Id of model to search for
-  *
-  */
-  async findByOrganization(key) {
-    return await Database.getConnection().models.CreditLine.findAll({ where: { "Organization": key } });
-  },
-  
-  /**
   * CreditLineModel.findByaccount
   *   @description CRUD ACTION findByaccount
   *   @param Objectid key Id of model to search for

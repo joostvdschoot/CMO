@@ -122,48 +122,6 @@ export class OrganizationBaseService {
     }
 
     /**
-    * OrganizationService.findByCountry
-    *   @description CRUD ACTION findByCountry
-    *   @param Objectid key Id of model to search for
-    *
-    */
-    findByCountry(id: string): Observable<Organization[]> {
-        return this.http
-            .get<Organization[]>(this.contextUrl + '/findByCountry/' + id)
-            .pipe(
-                map(response => response)
-            );
-    }
-
-    /**
-    * OrganizationService.findByLessor
-    *   @description CRUD ACTION findByLessor
-    *   @param Objectid key Id of model to search for
-    *
-    */
-    findByLessor(id: string): Observable<Organization[]> {
-        return this.http
-            .get<Organization[]>(this.contextUrl + '/findByLessor/' + id)
-            .pipe(
-                map(response => response)
-            );
-    }
-
-    /**
-    * OrganizationService.findByPartner
-    *   @description CRUD ACTION findByPartner
-    *   @param Objectid key Id of model to search for
-    *
-    */
-    findByPartner(id: string): Observable<Organization[]> {
-        return this.http
-            .get<Organization[]>(this.contextUrl + '/findByPartner/' + id)
-            .pipe(
-                map(response => response)
-            );
-    }
-
-    /**
     * OrganizationService.findBycountry
     *   @description CRUD ACTION findBycountry
     *   @param Objectid key Id of model to search for

@@ -50,16 +50,6 @@ const generatedModel = {
   },
   
   /**
-  * LessorModel.findByCountry
-  *   @description CRUD ACTION findByCountry
-  *   @param Objectid key Id of model to search for
-  *
-  */
-  async findByCountry(key) {
-    return await Database.getConnection().models.Lessor.findAll({ where: { "Country": key } });
-  },
-  
-  /**
   * LessorModel.findBycountry
   *   @description CRUD ACTION findBycountry
   *   @param Objectid key Id of model to search for

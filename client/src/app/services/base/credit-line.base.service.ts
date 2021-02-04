@@ -114,34 +114,6 @@ export class CreditLineBaseService {
     }
 
     /**
-    * CreditLineService.findByAccount
-    *   @description CRUD ACTION findByAccount
-    *   @param Objectid key Id of model to search for
-    *
-    */
-    findByAccount(id: string): Observable<CreditLine[]> {
-        return this.http
-            .get<CreditLine[]>(this.contextUrl + '/findByAccount/' + id)
-            .pipe(
-                map(response => response)
-            );
-    }
-
-    /**
-    * CreditLineService.findByOrganization
-    *   @description CRUD ACTION findByOrganization
-    *   @param Objectid key Id of model to search for
-    *
-    */
-    findByOrganization(id: string): Observable<CreditLine[]> {
-        return this.http
-            .get<CreditLine[]>(this.contextUrl + '/findByOrganization/' + id)
-            .pipe(
-                map(response => response)
-            );
-    }
-
-    /**
     * CreditLineService.findByaccount
     *   @description CRUD ACTION findByaccount
     *   @param Objectid key Id of model to search for

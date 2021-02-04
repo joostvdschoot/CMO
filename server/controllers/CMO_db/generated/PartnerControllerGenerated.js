@@ -29,9 +29,6 @@ const generatedControllers = {
     const baseUrl = `${Properties.api}/partner`;
     router.post(baseUrl + "", authorize([]), PartnerController.create);
     router.delete(baseUrl + "/:id", authorize([]), PartnerController.delete);
-    router.get(baseUrl + "/findByAccount/:key", authorize([]), PartnerController.findByAccount);
-    router.get(baseUrl + "/findByCountry/:key", authorize([]), PartnerController.findByCountry);
-    router.get(baseUrl + "/findByLessor/:key", authorize([]), PartnerController.findByLessor);
     router.get(baseUrl + "/findByaccount/:key", authorize([]), PartnerController.findByaccount);
     router.get(baseUrl + "/findBycountry/:key", authorize([]), PartnerController.findBycountry);
     router.get(baseUrl + "/findBylessor/:key", authorize([]), PartnerController.findBylessor);
@@ -68,54 +65,6 @@ const generatedControllers = {
   delete: async (req, res) => {
     try {
       const result = await PartnerModel.delete(req.params.id);
-      res.json(result);
-    } catch (err) {
-      const safeErr = ErrorManager.getSafeError(err);
-      res.status(safeErr.status).json(safeErr);
-    }
-  },
-  
-  /**
-  * PartnerModel.findByAccount
-  *   @description CRUD ACTION findByAccount
-  *   @param Objectid key Id of model to search for
-  *
-  */
-  findByAccount: async (req, res) => {
-    try {
-      const result = await PartnerModel.findByAccount(req.params.key);
-      res.json(result);
-    } catch (err) {
-      const safeErr = ErrorManager.getSafeError(err);
-      res.status(safeErr.status).json(safeErr);
-    }
-  },
-  
-  /**
-  * PartnerModel.findByCountry
-  *   @description CRUD ACTION findByCountry
-  *   @param Objectid key Id of model to search for
-  *
-  */
-  findByCountry: async (req, res) => {
-    try {
-      const result = await PartnerModel.findByCountry(req.params.key);
-      res.json(result);
-    } catch (err) {
-      const safeErr = ErrorManager.getSafeError(err);
-      res.status(safeErr.status).json(safeErr);
-    }
-  },
-  
-  /**
-  * PartnerModel.findByLessor
-  *   @description CRUD ACTION findByLessor
-  *   @param Objectid key Id of model to search for
-  *
-  */
-  findByLessor: async (req, res) => {
-    try {
-      const result = await PartnerModel.findByLessor(req.params.key);
       res.json(result);
     } catch (err) {
       const safeErr = ErrorManager.getSafeError(err);

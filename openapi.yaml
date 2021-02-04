@@ -237,75 +237,9 @@ paths:
           application/json:
             schema:
               $ref: "#/components/schemas/Account"
-  "/account/findByLessor/{key}":
-    get:
-      x-skaffolder-id: 6016b7dba3e049112323e5b0
-      x-skaffolder-name: findByLessor
-      x-skaffolder-id-resource: 6016b20da3e049112323e57e
-      x-skaffolder-resource: Account
-      x-skaffolder-crudAction: findByLessor
-      x-skaffolder-crudType: 
-      x-skaffolder-description: CRUD ACTION findByLessor
-      x-skaffolder-returnDesc: 
-      x-skaffolder-returnType: 
-      x-skaffolder-url: /findByLessor/{key}
-      x-skaffolder-roles: []
-      summary: CRUD ACTION findByLessor
-      tags:
-        - Account
-      parameters:
-        - name: key
-          x-skaffolder-type: Objectid
-          in: path
-          description: Id of model to search for
-          required: true
-          schema:
-            type: Objectid
-      responses:
-        "200":
-          description: OK
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: "#/components/schemas/Account"
-  "/account/findByProduct/{key}":
-    get:
-      x-skaffolder-id: 601bd56aa3e049112323ea1a
-      x-skaffolder-name: findByProduct
-      x-skaffolder-id-resource: 6016b20da3e049112323e57e
-      x-skaffolder-resource: Account
-      x-skaffolder-crudAction: findByProduct
-      x-skaffolder-crudType: 
-      x-skaffolder-description: CRUD ACTION findByProduct
-      x-skaffolder-returnDesc: 
-      x-skaffolder-returnType: 
-      x-skaffolder-url: /findByProduct/{key}
-      x-skaffolder-roles: []
-      summary: CRUD ACTION findByProduct
-      tags:
-        - Account
-      parameters:
-        - name: key
-          x-skaffolder-type: Objectid
-          in: path
-          description: Id of model to search for
-          required: true
-          schema:
-            type: Objectid
-      responses:
-        "200":
-          description: OK
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: "#/components/schemas/Account"
   "/account/findBylessor/{key}":
     get:
-      x-skaffolder-id: 601bfd2ca3e049112323eab8
+      x-skaffolder-id: 601c2a4ba3e049112323eb3a
       x-skaffolder-name: findBylessor
       x-skaffolder-id-resource: 6016b20da3e049112323e57e
       x-skaffolder-resource: Account
@@ -338,7 +272,7 @@ paths:
                   $ref: "#/components/schemas/Account"
   "/account/findByproduct/{key}":
     get:
-      x-skaffolder-id: 601bfd55a3e049112323eac6
+      x-skaffolder-id: 601c2a84a3e049112323eb48
       x-skaffolder-name: findByproduct
       x-skaffolder-id-resource: 6016b20da3e049112323e57e
       x-skaffolder-resource: Account
@@ -683,75 +617,9 @@ paths:
           application/json:
             schema:
               $ref: "#/components/schemas/CreditLine"
-  "/creditline/findByAccount/{key}":
-    get:
-      x-skaffolder-id: 601bd1eaa3e049112323e9e2
-      x-skaffolder-name: findByAccount
-      x-skaffolder-id-resource: 6016b771a3e049112323e5a6
-      x-skaffolder-resource: CreditLine
-      x-skaffolder-crudAction: findByAccount
-      x-skaffolder-crudType: 
-      x-skaffolder-description: CRUD ACTION findByAccount
-      x-skaffolder-returnDesc: 
-      x-skaffolder-returnType: 
-      x-skaffolder-url: /findByAccount/{key}
-      x-skaffolder-roles: []
-      summary: CRUD ACTION findByAccount
-      tags:
-        - CreditLine
-      parameters:
-        - name: key
-          x-skaffolder-type: Objectid
-          in: path
-          description: Id of model to search for
-          required: true
-          schema:
-            type: Objectid
-      responses:
-        "200":
-          description: OK
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: "#/components/schemas/CreditLine"
-  "/creditline/findByOrganization/{key}":
-    get:
-      x-skaffolder-id: 6016b80ca3e049112323e5c8
-      x-skaffolder-name: findByOrganization
-      x-skaffolder-id-resource: 6016b771a3e049112323e5a6
-      x-skaffolder-resource: CreditLine
-      x-skaffolder-crudAction: findByOrganization
-      x-skaffolder-crudType: 
-      x-skaffolder-description: CRUD ACTION findByOrganization
-      x-skaffolder-returnDesc: 
-      x-skaffolder-returnType: 
-      x-skaffolder-url: /findByOrganization/{key}
-      x-skaffolder-roles: []
-      summary: CRUD ACTION findByOrganization
-      tags:
-        - CreditLine
-      parameters:
-        - name: key
-          x-skaffolder-type: Objectid
-          in: path
-          description: Id of model to search for
-          required: true
-          schema:
-            type: Objectid
-      responses:
-        "200":
-          description: OK
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: "#/components/schemas/CreditLine"
   "/creditline/findByaccount/{key}":
     get:
-      x-skaffolder-id: 601bfd34a3e049112323eabe
+      x-skaffolder-id: 601c2a52a3e049112323eb40
       x-skaffolder-name: findByaccount
       x-skaffolder-id-resource: 6016b771a3e049112323e5a6
       x-skaffolder-resource: CreditLine
@@ -784,7 +652,7 @@ paths:
                   $ref: "#/components/schemas/CreditLine"
   "/creditline/findByorganization/{key}":
     get:
-      x-skaffolder-id: 601bfd3ca3e049112323eac2
+      x-skaffolder-id: 601c2a59a3e049112323eb44
       x-skaffolder-name: findByorganization
       x-skaffolder-id-resource: 6016b771a3e049112323e5a6
       x-skaffolder-resource: CreditLine
@@ -974,42 +842,9 @@ paths:
           application/json:
             schema:
               $ref: "#/components/schemas/Lessor"
-  "/lessor/findByCountry/{key}":
-    get:
-      x-skaffolder-id: 601bcf1ea3e049112323e9b1
-      x-skaffolder-name: findByCountry
-      x-skaffolder-id-resource: 6016b117a3e049112323e576
-      x-skaffolder-resource: Lessor
-      x-skaffolder-crudAction: findByCountry
-      x-skaffolder-crudType: 
-      x-skaffolder-description: CRUD ACTION findByCountry
-      x-skaffolder-returnDesc: 
-      x-skaffolder-returnType: 
-      x-skaffolder-url: /findByCountry/{key}
-      x-skaffolder-roles: []
-      summary: CRUD ACTION findByCountry
-      tags:
-        - Lessor
-      parameters:
-        - name: key
-          x-skaffolder-type: Objectid
-          in: path
-          description: Id of model to search for
-          required: true
-          schema:
-            type: Objectid
-      responses:
-        "200":
-          description: OK
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: "#/components/schemas/Lessor"
   "/lessor/findBycountry/{key}":
     get:
-      x-skaffolder-id: 601bfd23a3e049112323eab2
+      x-skaffolder-id: 601c2a44a3e049112323eb34
       x-skaffolder-name: findBycountry
       x-skaffolder-id-resource: 6016b117a3e049112323e576
       x-skaffolder-resource: Lessor
@@ -1199,108 +1034,9 @@ paths:
           application/json:
             schema:
               $ref: "#/components/schemas/Organization"
-  "/organization/findByCountry/{key}":
-    get:
-      x-skaffolder-id: 601bcf1ea3e049112323e9b3
-      x-skaffolder-name: findByCountry
-      x-skaffolder-id-resource: 6016b38ca3e049112323e58c
-      x-skaffolder-resource: Organization
-      x-skaffolder-crudAction: findByCountry
-      x-skaffolder-crudType: 
-      x-skaffolder-description: CRUD ACTION findByCountry
-      x-skaffolder-returnDesc: 
-      x-skaffolder-returnType: 
-      x-skaffolder-url: /findByCountry/{key}
-      x-skaffolder-roles: []
-      summary: CRUD ACTION findByCountry
-      tags:
-        - Organization
-      parameters:
-        - name: key
-          x-skaffolder-type: Objectid
-          in: path
-          description: Id of model to search for
-          required: true
-          schema:
-            type: Objectid
-      responses:
-        "200":
-          description: OK
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: "#/components/schemas/Organization"
-  "/organization/findByLessor/{key}":
-    get:
-      x-skaffolder-id: 6016b7dba3e049112323e5b2
-      x-skaffolder-name: findByLessor
-      x-skaffolder-id-resource: 6016b38ca3e049112323e58c
-      x-skaffolder-resource: Organization
-      x-skaffolder-crudAction: findByLessor
-      x-skaffolder-crudType: 
-      x-skaffolder-description: CRUD ACTION findByLessor
-      x-skaffolder-returnDesc: 
-      x-skaffolder-returnType: 
-      x-skaffolder-url: /findByLessor/{key}
-      x-skaffolder-roles: []
-      summary: CRUD ACTION findByLessor
-      tags:
-        - Organization
-      parameters:
-        - name: key
-          x-skaffolder-type: Objectid
-          in: path
-          description: Id of model to search for
-          required: true
-          schema:
-            type: Objectid
-      responses:
-        "200":
-          description: OK
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: "#/components/schemas/Organization"
-  "/organization/findByPartner/{key}":
-    get:
-      x-skaffolder-id: 601bd563a3e049112323ea0f
-      x-skaffolder-name: findByPartner
-      x-skaffolder-id-resource: 6016b38ca3e049112323e58c
-      x-skaffolder-resource: Organization
-      x-skaffolder-crudAction: findByPartner
-      x-skaffolder-crudType: 
-      x-skaffolder-description: CRUD ACTION findByPartner
-      x-skaffolder-returnDesc: 
-      x-skaffolder-returnType: 
-      x-skaffolder-url: /findByPartner/{key}
-      x-skaffolder-roles: []
-      summary: CRUD ACTION findByPartner
-      tags:
-        - Organization
-      parameters:
-        - name: key
-          x-skaffolder-type: Objectid
-          in: path
-          description: Id of model to search for
-          required: true
-          schema:
-            type: Objectid
-      responses:
-        "200":
-          description: OK
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: "#/components/schemas/Organization"
   "/organization/findBycountry/{key}":
     get:
-      x-skaffolder-id: 601bfd23a3e049112323eab4
+      x-skaffolder-id: 601c2a44a3e049112323eb36
       x-skaffolder-name: findBycountry
       x-skaffolder-id-resource: 6016b38ca3e049112323e58c
       x-skaffolder-resource: Organization
@@ -1333,7 +1069,7 @@ paths:
                   $ref: "#/components/schemas/Organization"
   "/organization/findBylessor/{key}":
     get:
-      x-skaffolder-id: 601bfd2ca3e049112323eaba
+      x-skaffolder-id: 601c2a4ba3e049112323eb3c
       x-skaffolder-name: findBylessor
       x-skaffolder-id-resource: 6016b38ca3e049112323e58c
       x-skaffolder-resource: Organization
@@ -1366,7 +1102,7 @@ paths:
                   $ref: "#/components/schemas/Organization"
   "/organization/findBypartner/{key}":
     get:
-      x-skaffolder-id: 601bfd4ca3e049112323eac4
+      x-skaffolder-id: 601c2a7ea3e049112323eb46
       x-skaffolder-name: findBypartner
       x-skaffolder-id-resource: 6016b38ca3e049112323e58c
       x-skaffolder-resource: Organization
@@ -1552,108 +1288,9 @@ paths:
           application/json:
             schema:
               $ref: "#/components/schemas/Partner"
-  "/partner/findByAccount/{key}":
-    get:
-      x-skaffolder-id: 601bd1eaa3e049112323e9e4
-      x-skaffolder-name: findByAccount
-      x-skaffolder-id-resource: 601bd0f1a3e049112323e9cc
-      x-skaffolder-resource: Partner
-      x-skaffolder-crudAction: findByAccount
-      x-skaffolder-crudType: 
-      x-skaffolder-description: CRUD ACTION findByAccount
-      x-skaffolder-returnDesc: 
-      x-skaffolder-returnType: 
-      x-skaffolder-url: /findByAccount/{key}
-      x-skaffolder-roles: []
-      summary: CRUD ACTION findByAccount
-      tags:
-        - Partner
-      parameters:
-        - name: key
-          x-skaffolder-type: Objectid
-          in: path
-          description: Id of model to search for
-          required: true
-          schema:
-            type: Objectid
-      responses:
-        "200":
-          description: OK
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: "#/components/schemas/Partner"
-  "/partner/findByCountry/{key}":
-    get:
-      x-skaffolder-id: 601bd1dea3e049112323e9de
-      x-skaffolder-name: findByCountry
-      x-skaffolder-id-resource: 601bd0f1a3e049112323e9cc
-      x-skaffolder-resource: Partner
-      x-skaffolder-crudAction: findByCountry
-      x-skaffolder-crudType: 
-      x-skaffolder-description: CRUD ACTION findByCountry
-      x-skaffolder-returnDesc: 
-      x-skaffolder-returnType: 
-      x-skaffolder-url: /findByCountry/{key}
-      x-skaffolder-roles: []
-      summary: CRUD ACTION findByCountry
-      tags:
-        - Partner
-      parameters:
-        - name: key
-          x-skaffolder-type: Objectid
-          in: path
-          description: Id of model to search for
-          required: true
-          schema:
-            type: Objectid
-      responses:
-        "200":
-          description: OK
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: "#/components/schemas/Partner"
-  "/partner/findByLessor/{key}":
-    get:
-      x-skaffolder-id: 601bd1e4a3e049112323e9e0
-      x-skaffolder-name: findByLessor
-      x-skaffolder-id-resource: 601bd0f1a3e049112323e9cc
-      x-skaffolder-resource: Partner
-      x-skaffolder-crudAction: findByLessor
-      x-skaffolder-crudType: 
-      x-skaffolder-description: CRUD ACTION findByLessor
-      x-skaffolder-returnDesc: 
-      x-skaffolder-returnType: 
-      x-skaffolder-url: /findByLessor/{key}
-      x-skaffolder-roles: []
-      summary: CRUD ACTION findByLessor
-      tags:
-        - Partner
-      parameters:
-        - name: key
-          x-skaffolder-type: Objectid
-          in: path
-          description: Id of model to search for
-          required: true
-          schema:
-            type: Objectid
-      responses:
-        "200":
-          description: OK
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: "#/components/schemas/Partner"
   "/partner/findByaccount/{key}":
     get:
-      x-skaffolder-id: 601bfd34a3e049112323eac0
+      x-skaffolder-id: 601c2a52a3e049112323eb42
       x-skaffolder-name: findByaccount
       x-skaffolder-id-resource: 601bd0f1a3e049112323e9cc
       x-skaffolder-resource: Partner
@@ -1686,7 +1323,7 @@ paths:
                   $ref: "#/components/schemas/Partner"
   "/partner/findBycountry/{key}":
     get:
-      x-skaffolder-id: 601bfd23a3e049112323eab6
+      x-skaffolder-id: 601c2a44a3e049112323eb38
       x-skaffolder-name: findBycountry
       x-skaffolder-id-resource: 601bd0f1a3e049112323e9cc
       x-skaffolder-resource: Partner
@@ -1719,7 +1356,7 @@ paths:
                   $ref: "#/components/schemas/Partner"
   "/partner/findBylessor/{key}":
     get:
-      x-skaffolder-id: 601bfd2ca3e049112323eabc
+      x-skaffolder-id: 601c2a4ba3e049112323eb3e
       x-skaffolder-name: findBylessor
       x-skaffolder-id-resource: 601bd0f1a3e049112323e9cc
       x-skaffolder-resource: Partner
@@ -2525,8 +2162,8 @@ components:
         - 6016b801a3e049112323e5b8
         - 6016b801a3e049112323e5ba
         - 6016b87ba3e049112323e5d7
-        - 601bfd34a3e049112323eabe
-        - 601bfd34a3e049112323eac0
+        - 601c2a52a3e049112323eb40
+        - 601c2a52a3e049112323eb42
         - 601bd1eaa3e049112323e9e6
       x-skaffolder-nesteds: 
       x-skaffolder-links: 
@@ -2552,9 +2189,9 @@ components:
         - 601bcf1ea3e049112323e9ae
         - 601bcf1ea3e049112323e9ac
         - 601bcf1ea3e049112323e9ad
-        - 601bfd23a3e049112323eab2
-        - 601bfd23a3e049112323eab4
-        - 601bfd23a3e049112323eab6
+        - 601c2a44a3e049112323eb34
+        - 601c2a44a3e049112323eb36
+        - 601c2a44a3e049112323eb38
       x-skaffolder-nesteds: 
       x-skaffolder-links: 
       x-skaffolder-roles: []
@@ -2624,9 +2261,9 @@ components:
         - 601bcf23a3e049112323e9b8
         - 6016b7dba3e049112323e5ae
         - 6016b87ba3e049112323e5d7
-        - 601bfd2ca3e049112323eab8
-        - 601bfd2ca3e049112323eaba
-        - 601bfd2ca3e049112323eabc
+        - 601c2a4ba3e049112323eb3a
+        - 601c2a4ba3e049112323eb3c
+        - 601c2a4ba3e049112323eb3e
       x-skaffolder-nesteds: 
       x-skaffolder-links: 
       x-skaffolder-roles: []
@@ -2656,7 +2293,7 @@ components:
         - 6016b80ca3e049112323e5c7
         - 6016b80ca3e049112323e5c7
         - 6016b80ca3e049112323e5c7
-        - 601bfd3ca3e049112323eac2
+        - 601c2a59a3e049112323eb44
         - 601bd556a3e049112323ea08
       x-skaffolder-nesteds: 
       x-skaffolder-links: 
@@ -2685,7 +2322,7 @@ components:
         - 6016b801a3e049112323e5bf
         - 6016b7dba3e049112323e5ae
         - 6016b87ba3e049112323e5d7
-        - 601bfd4ca3e049112323eac4
+        - 601c2a7ea3e049112323eb46
       x-skaffolder-nesteds: 
       x-skaffolder-links: 
       x-skaffolder-roles: []
@@ -2710,7 +2347,7 @@ components:
         - 601bd56aa3e049112323ea17
         - 601bd56aa3e049112323ea16
         - 601bd56aa3e049112323ea15
-        - 601bfd55a3e049112323eac6
+        - 601c2a84a3e049112323eb48
       x-skaffolder-nesteds: 
       x-skaffolder-links: 
       x-skaffolder-roles: []

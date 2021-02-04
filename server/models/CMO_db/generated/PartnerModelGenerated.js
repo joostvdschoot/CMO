@@ -50,36 +50,6 @@ const generatedModel = {
   },
   
   /**
-  * PartnerModel.findByAccount
-  *   @description CRUD ACTION findByAccount
-  *   @param Objectid key Id of model to search for
-  *
-  */
-  async findByAccount(key) {
-    return await Database.getConnection().models.Partner.findAll({ where: { "Account": key } });
-  },
-  
-  /**
-  * PartnerModel.findByCountry
-  *   @description CRUD ACTION findByCountry
-  *   @param Objectid key Id of model to search for
-  *
-  */
-  async findByCountry(key) {
-    return await Database.getConnection().models.Partner.findAll({ where: { "Country": key } });
-  },
-  
-  /**
-  * PartnerModel.findByLessor
-  *   @description CRUD ACTION findByLessor
-  *   @param Objectid key Id of model to search for
-  *
-  */
-  async findByLessor(key) {
-    return await Database.getConnection().models.Partner.findAll({ where: { "Lessor": key } });
-  },
-  
-  /**
   * PartnerModel.findByaccount
   *   @description CRUD ACTION findByaccount
   *   @param Objectid key Id of model to search for
